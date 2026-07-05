@@ -152,5 +152,35 @@
         </section>
 
     </div>
+    <script>
+    document.getElementById("form-captura").addEventListener("submit", function(e) {
+        e.preventDefault(); // Esto detiene el viaje hacia la URL de Google
+        
+        var form = e.target;
+        var data = new FormData(form);
+        var boton = form.querySelector('button[type="submit"]');
+        
+        // Cambiamos el texto del botón temporalmente para dar feedback visual
+        var textoOriginal = boton.innerText;
+        boton.innerText = "ENVIANDO...";
+        boton.disabled = true;
+
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            mode: 'no-cors' // Evita que los bloqueos de seguridad del navegador detengan el envío
+        }).then(() => {
+            // Reacción post-envío
+            alert("¡Datos enviados con éxito! Te contactaremos pronto.");
+            form.reset(); // Limpia el formulario
+            boton.innerText = textoOriginal;
+            boton.disabled = false;
+        }).catch(error => {
+            alert("Hubo una anomalía térmica. Intenta de nuevo.");
+            boton.innerText = textoOriginal;
+            boton.disabled = false;
+        });
+    });
+</script>
 </body>
 </html>
