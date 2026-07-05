@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Options Academy - Landing Page</title>
+    <!-- Inyección del motor de Tailwind vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración de colores personalizados para acercarnos a tu diseño
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#16a34a', // Verde del botón y checks
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brandGreen selection:text-white">
+
+    <div class="max-w-5xl mx-auto px-6 py-8">
+        
+        <!-- Cabecera: Logo -->
+        <header class="mb-12">
+            <div class="flex items-center gap-2">
+                <!-- Simulación del logo triangular -->
+                <svg class="w-8 h-8 text-brandGreen" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 22h20L12 2z"/>
+                </svg>
+                <div class="font-bold text-xl leading-tight">
+                    <span class="block">ACTIVE</span>
+                    <span class="block text-xs font-normal tracking-widest text-gray-500">OPTIONS ACADEMY</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sección Principal: Propuesta de Valor (Hero) -->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            
+            <!-- Columna Izquierda: Copywriting -->
+            <div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight text-black">
+                    Aprende a generar ingresos con Opciones y construye tu futuro con Activos.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Un método simple y probado para crear flujo de efectivo hoy y construir riqueza a largo plazo.
+                </p>
+                
+                <!-- Lista de beneficios -->
+                <ul class="space-y-4 font-medium text-gray-700">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-brandGreen flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Sin complicaciones
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-brandGreen flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Explicado paso a paso
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-brandGreen flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Para principiantes
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna Derecha: Imagen de Laptop (Placeholder gris para tu imagen real) -->
+            <div class="relative w-full h-64 md:h-80 bg-gray-200 rounded-xl flex items-center justify-center shadow-inner">
+                <span class="text-gray-400 text-sm">[Reemplazar con tu imagen de la laptop: src="ruta-a-imagen.jpg"]</span>
+            </div>
+        </main>
+
+        <!-- Sección de Flujo: Proceso Lineal -->
+        <section class="mb-16">
+            <div class="flex flex-wrap justify-center items-center gap-4 text-center text-sm font-bold text-gray-700">
+                <!-- Nodo 1 -->
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-2xl shadow-sm">📈</div>
+                    <span>OPCIONES</span>
+                </div>
+                <!-- Vector -->
+                <span class="text-gray-300 hidden sm:block">→</span>
+                <!-- Nodo 2 -->
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-2xl shadow-sm">💵</div>
+                    <span>INGRESOS</span>
+                </div>
+                <!-- Vector -->
+                <span class="text-gray-300 hidden sm:block">→</span>
+                <!-- Nodo 3 -->
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-2xl shadow-sm">🏠</div>
+                    <span>ACTIVOS</span>
+                </div>
+                <!-- Vector -->
+                <span class="text-gray-300 hidden sm:block">→</span>
+                <!-- Nodo 4 -->
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-2xl shadow-sm">🧍‍♂️</div>
+                    <span>LIBERTAD<br>FINANCIERA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Captura: El Formulario -->
+        <section class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Empieza con una clase gratuita</h2>
+                <p class="text-sm text-gray-500">Déjanos tus datos y recibe acceso inmediato.</p>
+            </div>
+
+            <!-- Formulario (Listo para inyectar el endpoint) -->
+            <form action="#" method="POST" class="space-y-4">
+                
+                <div>
+                    <input type="text" name="nombre" placeholder="Nombre completo" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandGreen focus:border-transparent transition-all">
+                </div>
+
+                <div>
+                    <input type="email" name="correo" placeholder="Correo electrónico" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandGreen focus:border-transparent transition-all">
+                </div>
+
+                <div>
+                    <input type="tel" name="whatsapp" placeholder="WhatsApp" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brandGreen focus:border-transparent transition-all">
+                </div>
+
+                <div class="relative">
+                    <select name="pais" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-brandGreen focus:border-transparent transition-all bg-white text-gray-600">
+                        <option value="" disabled selected>País</option>
+                        <option value="peru">Perú</option>
+                        <option value="mexico">México</option>
+                        <option value="colombia">Colombia</option>
+                    </select>
+                    <!-- Ícono de flecha personalizado para el select -->
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+
+                <button type="submit" 
+                    class="w-full bg-brandGreen hover:bg-green-700 text-white font-bold py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl mt-2">
+                    QUIERO MI CLASE GRATUITA
+                </button>
+                
+            </form>
+        </section>
+
+    </div>
+</body>
+</html>
